@@ -1578,7 +1578,7 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_10__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 49
         },
         __self: this
       }, function (_ref2) {
@@ -1592,7 +1592,7 @@ function (_React$Component) {
           }],
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 52
+            lineNumber: 53
           },
           __self: this
         }, function (createOrder) {
@@ -1601,7 +1601,7 @@ function (_React$Component) {
             name: "Sick Fits",
             description: "Order of ".concat(totalItems(me.cart), " items!"),
             image: me.cart.length && me.cart[0].item && me.cart[0].item.image,
-            stripeKey: "pk_test_Vtknn6vSdcZWSG2JWvEiWSqC",
+            stripeKey: "pk_test_FlqlIadTVVHPmgQC85JGDEv9001N5lqSOr",
             currency: "USD",
             email: me.email,
             token: function token(res) {
@@ -1609,7 +1609,7 @@ function (_React$Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 57
+              lineNumber: 58
             },
             __self: this
           }, _this2.props.children);

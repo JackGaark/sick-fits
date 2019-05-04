@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
-import Error from './ErrorMessage';
 import styled from 'styled-components';
 import Head from 'next/head';
+import Error from './ErrorMessage';
 
 const SingleItemStyles = styled.div`
   max-width: 1200px;
@@ -45,18 +45,17 @@ class SingleItem extends Component {
       >
         {({ error, loading, data }) => {
           if (error) return <Error error={error} />;
-          if (loading) return <p>Loading...</p>;
-          if (!data.item) return <p>No Item Found for {this.props.id}</p>;
-          const item = data.item;
+          if (loading) return <p> Loading... </p>;
+          if (!data.item) return <p> No Item Found for {this.props.id} </p>;
+          const { item } = data;
           return (
             <SingleItemStyles>
               <Head>
-                <title>Sick Fits | {item.title}</title>
+                <title> Sick Fits | {item.title} </title>
               </Head>
               <img src={item.largeImage} alt={item.title} />
               <div className="details">
-                <h2>Viewing {item.title}</h2>
-                <p>{item.description}</p>
+                <h2> Viewing {item.title} </h2> <p> {item.description} </p>
               </div>
             </SingleItemStyles>
           );
@@ -67,3 +66,4 @@ class SingleItem extends Component {
 }
 
 export default SingleItem;
+export { SINGLE_ITEM_QUERY };
